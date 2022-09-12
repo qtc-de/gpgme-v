@@ -106,7 +106,6 @@ are effectively never freed.
 ----
 
 This software comes with absolutely no warranty. It was created as a funny side project
-to learn more about the V language. At a certain point, development was stopped because
-V misses documentation on certain features and *autofree* is not ready yet. Development
-will probably continue once these things stabilize. Pull requests, contributions and
+to learn more about the V language. Development has been stopped for now, but probably
+continues once *autofree* becomes production ready. Pull requests, contributions and
 feedback are welcome anyways :)
