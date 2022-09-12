@@ -4,29 +4,6 @@ import os
 import io
 import time
 
-// I have no idea why, but for some reason V requires this struct to be defined here.
-// It is also defined within gpgme.v (and this worked for some time), but after one
-// of the later updates it was required to define the structure at this point. This
-// will be reported and the structure is removed once it is fixed.
-[heap]
-struct C._gpgme_key {
-pub:
-	_refs         u32
-	revoked       KeyFlags
-	protocol      Protocol
-	issuer_serial &char
-	issuer_name   &char
-	chain_id      &char
-	owner_trust   C.gpgme_validity_t
-	subkeys       &C._gpgme_subkey
-	uids          &C._gpgme_user_id
-	_last_subkey  &C._gpgme_subkey
-	_last_uid     &C._gpgme_user_id
-	keylist_mode  C.gpgme_keylist_mode_t
-	fpr           &char
-	last_update   u64
-}
-
 // PassphraseCallback specifies the general function signature that can be used to define
 // a passphrase callback. uid_hint might contain an indication for which user ID the passphrase
 // is requested, but might be empty. prev_was_bad indicates whether the previous password input
